@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TrusteRecipeBannerBuilder extends StatelessWidget {
-  const TrusteRecipeBannerBuilder({
+class TrustedRecipeBannerBuilder extends StatelessWidget {
+  const TrustedRecipeBannerBuilder({
     super.key,
     required this.height,
     required this.width,

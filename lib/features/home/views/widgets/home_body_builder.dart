@@ -15,7 +15,7 @@ class HomeBodyBuilder extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(child: HomeContentHeaderBuilder(height: height)),
         SliverToBoxAdapter(
-          child: TrusteRecipeBannerBuilder(height: height, width: width),
+          child: TrustedRecipeBannerBuilder(height: height, width: width),
         ),
       ],
     );
