@@ -33,10 +33,10 @@ class HomeBodyBuilder extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: height * 0.01),
-                // First 4 Lines in Description
+                // First 3 Lines in Description
                 Text(
                   "5 Easy Chili Recipes That Will Never Get Old",
-                  maxLines: 4,
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 28,
@@ -48,7 +48,7 @@ class HomeBodyBuilder extends StatelessWidget {
                 // Fill Description
                 Text(
                   "These easy and comforting chili recipes each have their own spin, but they're all packed with crowd-pleasing flavor.",
-                  maxLines: 4,
+                  maxLines: 6,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 16,
