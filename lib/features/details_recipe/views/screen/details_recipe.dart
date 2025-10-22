@@ -139,10 +139,65 @@ class DetailsRecipe extends StatelessWidget {
                 ),
               ),
               SizedBox(height: height * 0.02),
+              Image.network(
+                "https://www.allrecipes.com/thmb/2UB5Gf_1xta1nqdRHYzEzRIoukA=/240x160/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ar-aldi-dinner-shortcut-ar-aldi-4x3-81108591ff5c4d15acf44789ab36193c.jpg",
+                width: width * 0.9,
+                height: height * 0.3,
+                fit: BoxFit.cover,
+              ),
+              // ingredients and instructions will be here
+              SizedBox(height: height * 0.02),
+              IngredientsBuilder(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class IngredientsBuilder extends StatelessWidget {
+  const IngredientsBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
+    final height = size.height;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Ingredients",
+          style: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.w800,
+            color: Colors.black,
+          ),
+        ),
+        SizedBox(height: height * 0.02),
+        builderIngredients(width, height),
+        builderIngredients(width, height),
+        builderIngredients(width, height),
+      ],
+    );
+  }
+
+  Widget builderIngredients(double width, double height) {
+    return Row(
+      children: [
+        CircleAvatar(backgroundColor: Colors.orange[800], radius: 5),
+        SizedBox(width: width * 0.02),
+        Text(
+          "2 cups shredded cooked chicken",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+          ),
+        ),
+        SizedBox(height: height * 0.04),
+      ],
     );
   }
 }
