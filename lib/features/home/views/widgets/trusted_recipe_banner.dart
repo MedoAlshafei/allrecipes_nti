@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TrustedRecipeBannerBuilder extends StatelessWidget {
-  const TrustedRecipeBannerBuilder({
-    super.key,
-    required this.height,
-    required this.width,
-  });
-
-  final double height;
-  final double width;
+  const TrustedRecipeBannerBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
+    final height = size.height;
+
     return Container(
       height: height * 0.12,
       width: double.infinity,

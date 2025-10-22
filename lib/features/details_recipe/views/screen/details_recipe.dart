@@ -129,6 +129,7 @@ class DetailsRecipe extends StatelessWidget {
                 ],
               ),
               SizedBox(height: height * 0.02),
+
               // Recipe full Description
               Text(
                 "These delicious chicken enchiladas are packed with flavor and easy to make. Perfect for a weeknight dinner! Perfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinnerPerfect for a weeknight dinner",
@@ -146,6 +147,7 @@ class DetailsRecipe extends StatelessWidget {
                 height: height * 0.3,
                 fit: BoxFit.cover,
               ),
+
               // ingredients and instructions will be here
               SizedBox(height: height * 0.02),
               IngredientsBuilder(),

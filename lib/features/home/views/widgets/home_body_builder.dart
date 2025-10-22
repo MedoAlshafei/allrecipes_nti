@@ -8,16 +8,14 @@ class HomeBodyBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final width = size.width;
-    final height = size.height;
+    // final size = MediaQuery.of(context).size;
+    // final width = size.width;
+    // final height = size.height;
 
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(child: HomeContentHeaderBuilder(height: height)),
-        SliverToBoxAdapter(
-          child: TrustedRecipeBannerBuilder(height: height, width: width),
-        ),
+        SliverToBoxAdapter(child: HomeContentHeaderBuilder()),
+        SliverToBoxAdapter(child: TrustedRecipeBannerBuilder()),
         SliverToBoxAdapter(child: TheLatestBuilder()),
       ],
     );

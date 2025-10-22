@@ -30,7 +30,7 @@ class IngredientsBuilder extends StatelessWidget {
   Widget builderIngredients(double width, double height) {
     return Row(
       children: [
-        CircleAvatar(backgroundColor: Colors.orange[800], radius: 5),
+        CircleAvatar(backgroundColor: Colors.orange[800], radius: 6),
         SizedBox(width: width * 0.02),
         Text(
           "2 cups shredded cooked chicken",

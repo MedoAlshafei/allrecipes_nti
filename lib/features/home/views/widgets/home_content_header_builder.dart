@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomeContentHeaderBuilder extends StatelessWidget {
-  const HomeContentHeaderBuilder({super.key, required this.height});
-
-  final double height;
+  const HomeContentHeaderBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final height = size.height;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: Column(
