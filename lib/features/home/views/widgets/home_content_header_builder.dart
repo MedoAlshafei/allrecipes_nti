@@ -8,6 +8,12 @@ class HomeContentHeaderBuilder extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final height = size.height;
 
+    // random recipe image and description
+
+    // final String imageUrl;
+    // final String category;
+    // final String description;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       child: Column(
@@ -20,6 +26,8 @@ class HomeContentHeaderBuilder extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           SizedBox(height: height * 0.01),
+
+          //  category;
           Text(
             "EVERYDAY COOKING",
             style: TextStyle(
