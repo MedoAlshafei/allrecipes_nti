@@ -61,7 +61,7 @@ class MyRecipesSection extends StatelessWidget {
             ),
             SizedBox(height: 4),
             SizedBox(
-              height: 450,
+              height: 380,
               child: ListView.builder(
                 physics: AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
@@ -84,6 +84,11 @@ class MyRecipesSection extends StatelessWidget {
 class RecipesCard extends StatelessWidget {
   const RecipesCard({super.key});
 
+  final String imageUrl =
+      "https://www.allrecipes.com/thmb/hQJ9hR2s2rZ1iY-VI0T7R1AWXaA=/400x250/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7482913-texas-chili-ddmfs-4x3-1251-104a7c3b12984d778dd82e6873bb245f.jpg";
+  final String title = "Angela's Awesome Chicken Enchiladas";
+  final String rating = "3.8";
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -97,16 +102,18 @@ class RecipesCard extends StatelessWidget {
               topRight: Radius.circular(8),
             ),
             child: Image.network(
-              "https://www.allrecipes.com/thmb/hQJ9hR2s2rZ1iY-VI0T7R1AWXaA=/400x250/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7482913-texas-chili-ddmfs-4x3-1251-104a7c3b12984d778dd82e6873bb245f.jpg",
-              height: 200,
-              fit: BoxFit.fill,
+              imageUrl,
+              height: 150,
               width: double.infinity,
+              fit: BoxFit.fill,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "Angela's Awesome Chicken Enchiladas",
+              title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w800,
@@ -124,7 +131,7 @@ class RecipesCard extends StatelessWidget {
                     Icon(Icons.star, color: Colors.black, size: 20),
                     SizedBox(width: 4),
                     Text(
-                      "3.8",
+                      rating,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
@@ -134,6 +141,25 @@ class RecipesCard extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+          ),
+          SizedBox(height: 16),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(color: Colors.black, width: 2),
+              fixedSize: Size(220, 60),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            child: Text(
+              "Save Recipes",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w800,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
