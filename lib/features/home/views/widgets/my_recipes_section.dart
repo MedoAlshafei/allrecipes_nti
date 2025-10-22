@@ -60,7 +60,20 @@ class MyRecipesSection extends StatelessWidget {
               ),
             ),
             SizedBox(height: 4),
-            RecipesCard(),
+            SizedBox(
+              height: 450,
+              child: ListView.builder(
+                physics: AlwaysScrollableScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: SizedBox(width: 300, child: RecipesCard()),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
