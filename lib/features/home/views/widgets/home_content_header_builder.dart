@@ -28,6 +28,7 @@ class HomeContentHeaderBuilder extends StatelessWidget {
             ),
           ),
           SizedBox(height: height * 0.01),
+
           // First 3 Lines in Description
           Text(
             "5 Easy Chili Recipes That Will Never Get Old",
@@ -40,7 +41,8 @@ class HomeContentHeaderBuilder extends StatelessWidget {
             ),
           ),
           SizedBox(height: height * 0.01),
-          // Fill Description
+
+          // Full Description
           Text(
             "These easy and comforting chili recipes each have their own spin, but they're all packed with crowd-pleasing flavor.",
             maxLines: 6,

@@ -1,4 +1,5 @@
 import 'package:allrecipes/features/home/views/widgets/home_content_header_builder.dart';
+import 'package:allrecipes/features/home/views/widgets/the_latest_builder.dart';
 import 'package:allrecipes/features/home/views/widgets/trusted_recipe_banner.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class HomeBodyBuilder extends StatelessWidget {
         SliverToBoxAdapter(
           child: TrustedRecipeBannerBuilder(height: height, width: width),
         ),
+        SliverToBoxAdapter(child: TheLatestBuilder()),
       ],
     );
   }
